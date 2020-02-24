@@ -78,24 +78,24 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <br/>
         <center><h1 className="app-title">TO DO LIST</h1></center>
         <div className="main">
           <div
             style={{
-              fontFamily: 'Impact,Charcoal,sans-serif',
-              background: '#9fade4',
-              color: 'black',
-              padding: 30,
-              textAlign: "left",
+              fontFamily: 'Avenir, Helvetica, Arial, sans-serif',
+              color: '#2c3e50',
+              padding: 10,
+              textAlign: "center",
               maxWidth: 500,
               margin: "auto"
             }}
           >
             Add something to do..
+            <br/>
             <br />
             <input
               type="text"
-              placeholder="Type here"
               value={this.state.newItem}
               onChange={e => this.updateInput("newItem", e.target.value)}
             />
@@ -107,7 +107,7 @@ class App extends React.Component {
               <i className="material-icons"> + </i>
             </button>
             <br /> <br />
-            <ul>
+           
               {this.state.list.map(item => {
                 return (
                   <li key={item.id}>
@@ -118,7 +118,7 @@ class App extends React.Component {
                   </li>
                 );
               })}
-            </ul>
+            
           </div>
         </div>
       </div>
